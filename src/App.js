@@ -2,11 +2,15 @@
 import "./App.css"
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import useClipboard from "react-use-clipboard";
-import {useState} from "react";
+import { useState } from "react";
+
+
+
 
 
 const App = () => {
     const [textToCopy, setTextToCopy] = useState();
+
    
 
 
@@ -26,6 +30,7 @@ const App = () => {
                 <h2>Speech to Text Converter</h2>
                 <br/>
                 <p>Welcome to Yash's React Application. Hope you enjoy well with this one.</p>
+               
 
                 <div className="main-content">
                     {transcript}
@@ -36,8 +41,8 @@ const App = () => {
                     <button onClick={setCopied}>
                         {isCopied ? 'Copied!' : 'Copy to clipboard'}
                     </button>
-                    <button onClick={startListening}>Start Listening</button>
-            <button onClick={SpeechRecognition.stopListening}>Stop Listening</button>
+                    <button onClick={startListening}>Start Speaking</button>
+            <button onClick={SpeechRecognition.stopListening}>Stop Speaking</button>
             <button onClick={resetTranscript}>Clear Text</button>
 
                 </div>
